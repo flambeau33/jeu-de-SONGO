@@ -346,7 +346,7 @@ function afficher() {
 //FONCTION POUR RREJOUER
 function rejouer() {
     // On remet tout à zero
-    plateau = new Array(14).fill(5);
+    plateau = new Array(14).fill(4);
     scores = { SUD: 0, NORD: 0 };
     joueurActuel = "SUD";
     casesJouables = [0, 1, 2, 3, 4, 5, 6];
