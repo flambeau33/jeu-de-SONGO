@@ -16,7 +16,7 @@ const campSUD=[0,1,2,3,4,5,6];
 const campNORD=[7,8,9,10,11,12,13];
 
 //les cases speciale
-const caseSpecialeSUD=7; // SUD ne peut pas capturer pas ici
+const caseSpecialeSUD=13; // SUD ne peut pas capturer pas ici
 const caseSpecialeNORD=0;//NORD ne capture pas ici
 
 
