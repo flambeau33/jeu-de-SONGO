@@ -249,7 +249,7 @@ function terminerPartie() {
 }
 
 //FONCTION JOUER
-function jouer(caseChoisie) {
+async function jouer(caseChoisie) {
     // 1. Vérifier que c'est bien une case jouable
     if (!casesJouables.includes(caseChoisie)) {
         afficherMessage("Tu ne peux pas jouer cette case !", "erreur");
@@ -278,7 +278,7 @@ function jouer(caseChoisie) {
     }
 
     // 4. Distribuer les graines
-    let resultat = distribuer(caseChoisie);
+    let resultat =await distribuer(caseChoisie);
     
     let dernierCase = resultat.dernierCase;
     let totalGraines = resultat.totalGraines;
