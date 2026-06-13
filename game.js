@@ -75,6 +75,10 @@ function capturer(dernierCase, totalGraines) {
         plateau[dernierCase] -= 1;
         return;
     }
+    if (dernierCase === caseSpeciale) {
+    afficherMessage("Il s'agit d'une case speciale !","erreur");
+    return; // pas de capture sans tour complet
+   }
     //3- capture normale:la case doit contenir 2,3ou4 graines
     let caseAVerifier = dernierCase;
     while (campAdverse.includes(caseAVerifier)) {//on verifie que la case est bien chez l'adversaire
@@ -287,6 +291,7 @@ async function jouer(caseChoisie) {
 
     // 6. Vérifier si la partie est terminée
     if (verifierFinDePartie()) {
+        afficher();
         return; // la partie est finie
     }
 
