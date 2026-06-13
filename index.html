@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jeu de Songo</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <h1> Jeu de Songo-TP DE 222</h1>
+
+    <!-- Scores -->
+    <div id="scores">
+        <div class="score" id="score-nord">
+            NORD : <span id="val-nord">0</span> graines
+        </div>
+        <div class="score" id="score-sud">
+            SUD : <span id="val-sud">0</span> graines
+        </div>
+    </div>
+
+    <!-- Joueur actuel -->
+    <div id="joueur-actuel">Tour du joueur : <strong id="nom-joueur">SUD</strong></div>
+
+    <!-- Zone de message -->
+    <div id="message" class="message-cache"></div>
+    
+    <!-- Le plateau -->
+    <div id="plateau">
+
+        <!-- Rangée NORD (cases 7 à 13, affichées de droite à gauche) -->
+        <div class="rangee" id="rangee-nord">
+            <div class="case" id="case-13" onclick="jouer(13)">
+                <span class="num-case"></span>
+                <span class="graines" id="graines-13"></span>
+            </div>
+            <div class="case" id="case-12" onclick="jouer(12)">
+                <span class="num-case"></span>
+                <span class="graines" id="graines-12"></span>
+            </div>
+            <div class="case" id="case-11" onclick="jouer(11)">
+                <span class="num-case"></span>
+                <span class="graines" id="graines-11"></span>
+            </div>
+            <div class="case" id="case-10" onclick="jouer(10)">
+                <span class="num-case"></span>
+                <span class="graines" id="graines-10"></span>
+            </div>
+            <div class="case" id="case-9" onclick="jouer(9)">
+                <span class="num-case"></span>
+                <span class="graines" id="graines-9"></span>
+            </div>
+            <div class="case" id="case-8" onclick="jouer(8)">
+                <span class="num-case"></span>
+                <span class="graines" id="graines-8"></span>
+            </div>
+            <div class="case" id="case-7" onclick="jouer(7)">
+                <span class="num-case"></span>
+                <span class="graines" id="graines-7"></span>
+            </div>
+        </div>
+
+        <!-- Rangée SUD (cases 0 à 6, affichées de gauche à droite) -->
+        <div class="rangee" id="rangee-sud">
+            <div class="case" id="case-0" onclick="jouer(0)">
+                <span class="num-case"></span>
+                <span class="graines" id="graines-0"></span>
+            </div>
+            <div class="case" id="case-1" onclick="jouer(1)">
+                <span class="num-case"></span>
+                <span class="graines" id="graines-1"></span>
+            </div>
+            <div class="case" id="case-2" onclick="jouer(2)">
+                <span class="num-case"></span>
+                <span class="graines" id="graines-2"></span>
+            </div>
+            <div class="case" id="case-3" onclick="jouer(3)">
+                <span class="num-case"></span>
+                <span class="graines" id="graines-3"></span>
+            </div>
+            <div class="case" id="case-4" onclick="jouer(4)">
+                <span class="num-case"></span>
+                <span class="graines" id="graines-4"></span>
+            </div>
+            <div class="case" id="case-5" onclick="jouer(5)">
+                <span class="num-case"></span>
+                <span class="graines" id="graines-5"></span>
+            </div>
+            <div class="case" id="case-6" onclick="jouer(6)">
+                <span class="num-case"></span>
+                <span class="graines" id="graines-6"></span>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- Bouton rejouer -->
+    <button id="btn-rejouer" onclick="rejouer()">Rejouer</button>
+
+    <script src="game.js"></script>
+</body>
+</html>
